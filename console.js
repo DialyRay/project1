@@ -1,13 +1,12 @@
 function the4060game(balance, bet, attempts) {
-    let arr = [true, false, true, false, true, false, true, false, true, true];
     for (let i = 0; i < attempts; i++) {
-        let result = arr[Math.floor(Math.random() * arr.length + 1)];
-        if (result == true) {
-            bal = bal + bet * 2;
+        let result = Math.floor(Math.random() * 101);
+        if (result > 40) {
+            balance = balance + bet * 2;
         } else {
-            bal = bal - bet;
+            balance = balance - bet;
         }
     }
-    console.log(bal);
+    console.log(balance);
 }
 console.log(the4060game(20, 2, 20));

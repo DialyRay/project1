@@ -1,0 +1,38 @@
+<html>
+<div>
+  <h3>зп за неделю</h3>              
+  <p>введите количество пятерок</p>
+  <input type="number" id="mark5">
+  <p>введите количество четверок</p>
+  <input type="number" id="mark4">
+  <p>введите количество троек</p>
+  <input type="number" id="mark3">
+  <p>введите количество двоек</p>
+  <input type="number" id="mark2">
+  <p>введите количество пятерок+</p>
+  <input type="number" id="mark55">
+  <p>введите количество четверок+</p>
+  <input type="number" id="mark44">
+  <p>введите количество троек+</p>
+  <input type="number" id="mark33">
+  <p>введите количество двоек+</p>
+  <input type="number" id="mark22">  
+</div>
+<p> </p>
+<button onclick="sumMarks()">посчитать</button>
+<script>
+  function sumMarks() {
+    let marks = document.getElementById('mark5').value * 300 + document.getElementById('mark4').value * 200 +
+        document.getElementById('mark3').value * -200 + 
+        document.getElementById('mark2').value * -500 + 
+        document.getElementById('mark55').value * 500 +
+        document.getElementById('mark44').value * 300 +
+        document.getElementById('mark33').value * -300 + document.getElementById('mark22').value * -1000;
+    if (document.getElementById('mark33').value == 0 && document.getElementById('mark3').value == 0) {
+      marks = marks * 2;
+    }
+    alert(marks)
+  }
+</script>
+
+</html>
